@@ -1,0 +1,21 @@
+/* Styles specific to the heroes list cards to improve image presentation */
+:host { display:block }
+
+.hero-card {
+	border-radius: 0.75rem;
+}
+
+.hero-card img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+@media (min-width: 768px) {
+	.hero-card img { height: 18rem; }
+}
+
+.animate-hero-image {
+	animation: fadeScale 420ms cubic-bezier(.2,.9,.3,1) both;
+}

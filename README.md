@@ -1,59 +1,53 @@
-# Heroes
+# Heroes SPA
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+Una SPA (Angular) que muestra una lista paginada de superhéroes y una vista de detalle por héroe.
+Incluye animaciones, diseño con Tailwind CSS y uso de Angular Signals (`signal`/`effect`) y `inject()`.
 
-## Development server
+**Características principales**
+- Lista paginada de héroes con tarjetas visuales.
+- Vista detalle con imagen ampliada, powerstats (barras), apariencia y biografía en español.
+- Animaciones con `@angular/animations` y animaciones CSS para imágenes y barras.
 
-To start a local development server, run:
+**Requisitos**
+- **Node.js**: versión 18 o superior recomendada.
+- **npm**: versión 9 o superior recomendada.
+- (Opcional) `@angular/cli` si quieres ejecutar `ng` globalmente: `npm install -g @angular/cli`.
 
-```bash
-ng serve
+**Instalación (desde cero)**
+1. Clona el repositorio y entra en la carpeta:
+
+```powershell
+git clone <tu-repo-url>
+cd heroes
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+2. Instala dependencias:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```powershell
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+3. (Si al instalar faltan pares de dependencias de `@angular/animations`, instala la versión que corresponda a tu Angular instalado. Por ejemplo si usas Angular 19.x:)
 
-```bash
-ng generate --help
+```powershell
+npm install @angular/animations@19.2.17 --save
 ```
 
-## Building
+4. Ejecuta la aplicación en modo desarrollo:
 
-To build the project run:
-
-```bash
-ng build
+```powershell
+npm run start
+# o, si prefieres: ng serve --open
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+La app estará disponible en `http://localhost:4200/`.
 
-## Running unit tests
+**Build de producción**
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```powershell
+ng build --configuration production
+# o si tienes script en package.json:
+npm run build
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Los archivos de salida se generarán en `dist/`.
